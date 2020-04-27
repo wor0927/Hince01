@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Hince</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../HINCS/css/hince.css">
+<!--    <script src="../HINCS/js/hince.js"></script>-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0,maximum-scale=1.0, user-scalable=no">-->
+    <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" data-auto-replace-svg="nest"></script>
+    <script src="../HINCS/js/jquery-3.4.1.min.js"></script>
+
+
+
+
+<script> 
+$(document).ready(function() {
+    
+        //헤더 스크롤 (숨겼다가 나오기)
+            var didScroll; 
+            var lastScrollTop = 0; 
+            var delta = 5; 
+            var navbarHeight = $('header').outerHeight();
+
+            $(window).scroll(function(event){ didScroll = true; });
+
+            setInterval(function() { 
+                if (didScroll) { 
+                    hasScrolled(); 
+                    didScroll = false; } }, 250);
+
+                function hasScrolled() { 
+                    var st = $(this).scrollTop(); 
+                    if(Math.abs(lastScrollTop - st) <= delta) return; 
+                    if (st > lastScrollTop && st > navbarHeight){
+                        $('header').removeClass('nav-down').addClass('nav-up'); } 
+                    else { 
+                        if(st + $(window).height() < $(document).height()) { 
+                            $('header').removeClass('nav-up').addClass('nav-down'); 
+                        } 
+                } 
+                lastScrollTop = st; 
+            }
+    
+    
+    
+            //컬렉션 스크롤 애니메이션 
+            /* 1 */
+            $(window).scroll( function(){
+                /* 2 */
+                $('#IMAGE').each( function(i){
+                    var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+                    var bottom_of_window = $(window).scrollTop() + $(window).height();
+
+
+                    /* 3 */
+                    if( bottom_of_window > bottom_of_object/2 ){
+                        $(this).animate({'opacity':'1'},900);
+
+                    }
+                }); 
+            });
+
+            //카카오톡 스크롤 애니메이션  
+            $(window).scroll(function(){
+                    if($(this).scrollTop() >= 500){
+                        $(".k_btn").fadeIn();
+                    } else {
+                        $(".k_btn").fadeOut();
+                    }
+                });
+                    $(".k_btn").click(function(){
+                        $('html, body').animate({scrollTop:0}, 1000);   
+                    });
+
+                var search = $("search");
+                var s_bt = $("#s_bt");
+                var burger = $(".burger");    
+
+                s_bt.click(function(){
+                    search.slideToggle(700).animate({left:"+=50"},"linear",{'opacity':'1'});
+                });
+
+                s_bt.click(function(){
+                    search.clearQueue();
+                }); 
+    
+            //햄버거 애니메이션
+            var num = 0;
+            $("div.burger").click(function(){
+                $(".burger").toggleClass("change");
+            }); 
+    
+    
+});
+</script>
+
+</head>
+<body>
+<!-- 검색창-->
+   <search>
+       <div id="info">
+            <div class="info_h">
+               <!-- 햄버거 메뉴-->
+                <div class="burger">
+                    <div class="b1"></div>
+                    <div class="b2"></div>
+                    <div class="b3"></div>    
+                </div> 
+                
+                <div class="text_h">
+                    <p>Search</p>
+                    <form action="#" class="frm">
+                        <div class="input_h">
+                            <input type="search" placeholder="검색어를 입력해주세요">
+                            <button><a href="#" ><img src="img/search.png" alt="검색"/></a></button>
+                        </div>
+                    </form>
+                </div>
+          </div>
+       </div>
+   </search>
+   
+   
+    <div id="wrap">
+       <div id="back_img">
+            <img src="img/jeju_3.jpg" alt="백그라운드 이미지">
+        </div>
+        
+<!--헤더-->
+       <header>
+        <div id="header" >
+            <nav>
+                <p><a href="#">hince</a></p>
+                <div class="t_nav">
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Collection</a></li>
+                        <li><a href="#">Shop</a></li>
+                        <li><a href="#">Store</a></li>
+                    </ul>
+                </div>
+                <div id="top_img">
+                   <a href="#"><img class="people" src="img/login.png" alt="로그인 이미지"></a>
+                   <a href="#" id="s_bt"><img class="search" src="img/search.png" alt="검색 이미지"></a>
+                </div>
+            </nav>
+        </div>
+    </header>
+ <!-- 백그라운드 이미지-->           
+        
+<!--컨테이너-->
+            <div id="container">
+                    <section id="top">
+                        <img id="IMAGE" class="img1" src="img/모델이미지.png" alt="" />
+                            <div id="t_text" class="text01">
+                                <span>Glow from Within.</span>
+                                <p>섬세하게 차오르는 본연의 빛.</p>
+                                <p>글로우 업 컬렉션 </p>
+                            </div>
+                        <img id="IMAGE" class="img2" src="img/물결그라데이션.png" alt=""/>
+                            <div id="t_text" class="text02">
+                                <span>Shine Your True Light</span>
+                                <p>과장되지않은, 지금 그대로의</p>
+                                <p>당신을 더욱 빛나게할</p>
+                                <p>미러라이크 컬렉션</p>
+                            </div>
+                        <img id="IMAGE" class="img3" src="img/유리.png" alt="" />
+                            <div id="t_text" class="text03">
+                                <span>New Depth Inside You.</span>
+                                <p>새로운 면모의 발견.</p>
+                                <p>뉴 뎁스 컬렉션</p>
+                            </div>
+                        <img id="IMAGE" class="img4"src="img/마지막그림.png" alt="" />
+                    </section>
+            </div>
+            <div id="sidebar">
+                    <section id="middle">
+                        <div class="glowbox">
+                            <img class="glow1" src="img/립스틱.png" alt="hince립스틱">
+                            <img class="glow2" src="img/입술.png" alt="입술사진">
+                            <img class="glow3" src="img/립스틱느낌.png" alt="립스틱텍스쳐">
+                        </div>
+                        <div class="m_text">
+                            <a href="">SHOP</a>
+                        </div>
+                    </section>
+            </div>
+    
+       
+            <div id="article">
+                    <div class="slide_img">
+                       <li class="s_img01">
+                           <a href="#">
+
+                              
+                           </a>
+                       </li>
+                       <li class="s_img02">
+                           <a href="#">
+
+                                
+                           </a>
+                       </li>
+                       <li class="s_img03">
+                           <a href="#">
+
+                              
+                            </a>
+                       </li>
+                    </div>
+                    <div class="slide_02">
+                        <a href=""><img src="img/slidebtn.png" alt="화살표(Next)"></a>
+                    </div>
+            </div>
+
+            <div id="footer">
+                    <div id="PARTNERSHIP">
+                        <h3>PARTNERSHIP</h3>
+                        <span>도매/제휴문의</span>
+                            <p>sales@vivawave.co.kr</p>
+                        <span>해외수출문의</span>
+                            <p>global@vivawave.co.kr</p>
+                    </div>
+
+                    <div id="FLAGSHIP_STORE">
+                        <h3 >FLAGSHIP STORE</h3>
+                        <p>힌스 아틀리에 성수점</p>
+                        <p>매일 12:00 ~ 20:00/ 서울시 성동구 왕십리로 14길 22-2</p>
+                    </div>
+
+                    <div id="b_link">
+                        <div class="link_img">
+                           <a href="#"><img src="img/instar.png" alt="인스타그램"></a>
+                           <a href="#"><img src="img/febook.png" alt="페이스북"></a>
+                           <a href="#"><img src="img/youtube.png" alt="유튜브"></a>
+                        </div>
+
+                        <div class="copyright">
+                            <h3>CUSTOMER CENTER</h3>
+                            <h1><a href="">1644 7161</a></h1>
+                            <p>11:00  -  17:00 (Lunch time 13:00 - 14:30)</p>    
+                            <p>토,일요일 및 공휴일 휴무 </p>
+                        </div>
+                    </div>
+
+                    <p>© 2019 VIVAWAVE Co. Ltd. All rights reserved.</p>
+                </div>
+            
+    </div>
+    <div id="kakao">
+        <a href="#"><img class="k_btn" src="img/kakao.png" alt="카카오톡 상담"></a>
+    </div>
+</body>
+</html>

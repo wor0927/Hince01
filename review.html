@@ -1,0 +1,467 @@
+<body>
+    <!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>hince</title>
+    <script src="js/jquery-3.4.1.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+	
+<style>
+
+
+html,body { height: 100%;}
+#wrap { width: 100%;  height: 100%; margin: 0 auto;}
+#back_img {width: 100%; height: 875px;}
+#back_img img{ width: 100%; height: 100%; z-index: -9999;}
+
+        
+        
+        
+/*search*/
+    search {
+        width: 100%;
+        display: none;
+        z-index: 999999;
+        background:
+    }
+
+    search #info {
+        width: 100%;
+        height: 300px;
+        background: #eee;
+         
+        opacity: 0.7;
+        position: relative;
+    }
+    search #info .text_h {
+        width: 80%;
+        height: 150px;
+        background: #eee;
+        position: absolute;
+        left: 10%;
+        top: 20%;
+    }
+    search #info .text_h p {
+        font-size: 25px;
+        margin: 20px;
+        color: #4f645a;
+        font-weight: bold;
+    }
+    search #info .text_h .frm {
+        margin: 20px;
+        width: 90%;
+        border-bottom: 3px solid #fff;
+    }
+    search #info .frm .input_h { 
+        width:100%;
+        }
+    search #info .frm .input_h input[type="search"] {
+        border: 0;
+        width: 95%;
+        height: 25px;
+        font-size: 14px;
+        background: #eee;
+        color: #4f645a;
+        }
+    search #info .frm .input_h button {
+        direction: block;
+        width: 50px;
+        height: 50px;
+        border: 0;
+    }
+    search #info .frm .input_h a {
+        width: 20px;
+        height: 20px;
+        z-index: 999999;
+        _text-indent: -99999px; 
+    }
+
+    search #info .frm .input_h input[type="search"]:hover { opacity: 0.5; }
+
+        
+/* 헤더 */
+        body {min-width: 1024px; padding-top: 60px; height:3000px;} 
+
+        .nav-up { top: -60px;}
+
+        header {width: 100%; top: 0; left: 0; height: 60px; position: absolute; text-align: center;  position: fixed; z-index: 50; box-sizing:border-box; transition: top 0.2s ease-in-out; background: #eee; }
+    
+        #header nav {width: 100%; height: 60px;}
+        #header p { float: left; width: 10%;  height: 60px; font-size: 40px; margin-left: 10px; }
+        #header nav p:hover { opacity: 0.3; transition: all 0.5s;}
+        
+        #header .t_nav {width: 80%;  height: 60px; font-size: 35px; text-align: center;float: left;}
+        #header .t_nav ul li { 
+            display: block;
+            float: left;
+            width: 20%;
+            padding: 17px;
+            font-size: 20px;
+            transition: all 0.5s;
+            font-weight: bold;
+            letter-spacing: 3px; 
+            box-sizing: border-box;}
+        
+        #header >nav > .t_nav> ul> li:nth-child(1) {margin-left: 100px;}
+        nav li:hover a {color: white; opacity: 0.9; border-bottom: 10px solid #ddd; transition: all 0.5s;}
+        
+/*header icon*/
+        #header #top_img { float: right; width: 9%; height: 60px; line-height: 4; }
+        #header #top_img i{ margin-right: 30px;  font-size: 30px;}
+        #header #top_img a:hover { opacity: 0.3; transition: all 0.5s;}
+        
+        
+    
+    
+    
+    
+    
+/*  reset*/
+        *{margin: 0; padding: 0;}
+        body { box-sizing: border-box;  width: 100%; height: 800px;}
+        ul,ol {list-style: none; }
+        a { outline: 0; text-decoration: none; color: #000;}
+        img { border: 0;}
+        
+
+        
+/*    sign_up*/
+        #main {width: 100%; height: 400px; position: relative; top: 90px;}
+        
+        #sign_up {width: 50%; height: 100%; margin-bottom: 30px; position: relative; float: left;}
+        #sign_up ul:nth-child(1) {width:30%;  height: 110px; margin: 0 auto; }
+        #sign_up ul:nth-child(2) {width:30%;  height: 60px; margin: 0 auto; }
+        #sign_up ul:nth-child(3) {width:30%;  height: 60px; margin: 0 auto;}
+        #sign_up ul:nth-child(4) {width:30%;  height: 60px; margin: 0 auto; }
+        
+        #sign_up ul li { width: 100%; text-align: left; }
+        #sign_up ul li h3 {width: 100%; text-align: center; margin-bottom: 30px; }
+        #sign_up ul li p { text-align: left; font-size: 12px; }
+        #sign_up ul li input { width: 100%; height: 30px;}
+    
+        #sign_up ul:nth-child(3) { width: 30%; }
+        #sign_up ul:nth-child(3) li {width: 50%; float: left;  text-align: center;}
+        #sign_up ul:nth-child(3) li a {font-weight:bold; font-size: 13px;}
+        
+        #sign_up ul:nth-child(4) li  {width: 100%; text-align: center;}
+        #sign_up ul:nth-child(4) li button{ width: 40%; height: 40px; background-color: #fff; border-radius: 5px; font-weight: bold} 
+          
+    .page_wrap a .fas {line-height: 2.4;}
+        
+</style>
+
+<script>
+    $(function(){
+
+        var num=0;
+        $(".btn>a").click(function(){
+            var i = $(this).index();
+            $(".btn>a").removeClass();
+            $(".btn>a").eq(i).addClass("active");
+            $("ul").removeClass();
+            $("ul").eq(i).addClass("list");
+            num = i;
+        });
+        $(".btnlb").click(function(e){
+            e.preventDefault();
+            num = num-1;
+            if (num < 0){
+                num = 0;
+                return;
+            }
+            $(".btn>a").removeClass();
+            $(".btn>a").eq(num).addClass("active");
+            $("ul").removeClass();
+            $("ul").eq(num).addClass("list");
+        });
+        
+        $(".btnrb").click(function(e){      
+            e.preventDefault();
+            listNum = $(".btn>a").length;
+            num = num+1;
+            if (num >= listNum){
+                num = listNum-1;
+                return;
+            }
+            $(".btn>a").removeClass();
+            $(".btn>a").eq(num).addClass("active");
+            $("ul").removeClass();
+            $("ul").eq(num).addClass("list");
+        });
+        
+        $(".btnll").click(function(){
+            $(".btn>a").removeClass();
+            $(".btn>a").eq(0).addClass("active");
+            $("ul").removeClass();
+            $("ul").eq(0).addClass("list");
+            num = 0;
+        });
+        
+        $(".btnrr").click(function(){
+            $(".btn>a").removeClass();
+            $(".btn>a").eq(2).addClass("active");
+            $("ul").removeClass();
+            $("ul").eq(2).addClass("list");
+            num = 2;
+        });
+        
+        
+        
+        //헤더 스크롤 (숨겼다가 나오기)
+            var didScroll; 
+            var lastScrollTop = 0; 
+            var delta = 5; 
+            var navbarHeight = $('header').outerHeight();
+
+            $(window).scroll(function(event){ didScroll = true; });
+
+            setInterval(function() { 
+                if (didScroll) { 
+                    hasScrolled(); 
+                    didScroll = false; } }, 250);
+
+                function hasScrolled() { 
+                    var st = $(this).scrollTop(); 
+                    if(Math.abs(lastScrollTop - st) <= delta) return; 
+                    if (st > lastScrollTop && st > navbarHeight){
+                        $('header').removeClass('nav-down').addClass('nav-up'); } 
+                    else { 
+                        if(st + $(window).height() < $(document).height()) { 
+                            $('header').removeClass('nav-up').addClass('nav-down'); 
+                        } 
+                } 
+                lastScrollTop = st; 
+            }
+
+    
+            //검색 애니메이션
+                var search = $("search");
+                var s_bt = $("#s_bt");
+                var burger = $(".burger");    
+
+                s_bt.click(function(){
+                    search.slideToggle(700).animate({left:"+=50"},"linear",{'opacity':'1'});
+                });
+
+                s_bt.click(function(){
+                    search.clearQueue();
+                }); 
+            
+            var promise = document.querySelector('video').play();
+            if (promise !== undefined) {
+
+              promise.then(_ => {
+                // 자동 재생 시작!
+              }).catch(error => {
+                // 자동 재생이 막힘.
+                // "Play" 버튼을 노출해 유저가 재생을 시작할 수 있도록 한다
+              });
+            }
+    });
+</script>
+</head>
+
+<body>
+    <header>
+        <div id="header" >
+            <nav>
+                <p><a href="HINCE_%ED%99%88%ED%8E%98%EC%9D%B4%EC%A7%80.html">hince</a></p>
+                <div class="t_nav">
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Collection</a></li>
+                        <li><a href="#">Shop</a></li>
+                        <li class="review"><a href="review.html">Review</a></li>
+                    </ul>
+                </div>
+                <div id="top_img">
+                   <a href="login.html"><i class="far fa-user"></i></a>
+                   <a href="#" id="s_bt"><i class="fas fa-search"></i></a>
+                </div>
+            </nav>
+        </div>
+        <!-- 검색창-->
+    <search>
+       <div id="info">
+                <div class="text_h">
+                    <p>Search</p>
+                    <form action="#" class="frm">
+                        <div class="input_h">
+                            <input type="search" placeholder="검색어를 입력해주세요">
+                            <button><a href="#" ><img src="img/search.png" alt="검색"/></a></button>
+                        </div>
+                    </form>
+                </div>
+          </div>
+   </search>
+</header>
+
+<!--본문 시작-->
+    <h1>Review</h1>
+	<div class="table_layout">
+		<ul class="list">
+			<li class="table_th">
+				<div class="num dpnone">번호</div>
+				<div class="th_subject">제목</div>
+				<div class="date dpnone">등록일</div>
+				<div class="count dpnone">조회</div>
+			</li>
+			<li class="table_tr">
+				<div class="num">15</div>
+				<div class="subject">Hince Review</div>
+				<div class="date">2020-05-05</div>
+				<div class="count">210</div>
+			</li>
+			<li class="table_tr">
+				<div class="num">14</div>
+				<div class="subject">Hince Review</div>
+				<div class="date">2020-05-05</div>
+				<div class="count">130</div>
+			</li>
+			<li class="table_tr">
+				<div class="num">13</div>
+				<div class="subject">Hince Review</div>
+				<div class="date">2020-05-05</div>
+				<div class="count">89</div>
+			</li>
+			<li class="table_tr">
+				<div class="num">12</div>
+				<div class="subject">Hince Review</div>
+				<div class="date">2020-05-05</div>
+				<div class="count">180</div>
+			</li>
+			<li class="table_tr">
+				<div class="num">11</div>
+				<div class="subject">Hince Review</div>
+				<div class="date">2020-05-05</div>
+				<div class="count">110</div>
+			</li>
+			
+		</ul>
+		<ul>
+			<li class="table_th">
+				<div class="num dpnone">번호</div>
+				<div class="th_subject">제목</div>
+				<div class="date dpnone">등록일</div>
+				<div class="count dpnone">조회</div>
+			</li>
+			<li class="table_tr">
+				<div class="num">10</div>
+				<div class="subject">Hince Review</div>
+				<div class="date">2020-05-05</div>
+				<div class="count">110</div>
+			</li>
+			<li class="table_tr">
+				<div class="num">9</div>
+				<div class="subject">Hince Review</div>
+				<div class="date">2020-05-05</div>
+				<div class="count">110</div>
+			</li>
+			<li class="table_tr">
+				<div class="num">8</div>
+				<div class="subject">Hince Review</div>
+				<div class="date">2020-05-05</div>
+				<div class="count">110</div>
+			</li>
+			<li class="table_tr">
+				<div class="num">7</div>
+				<div class="subject">Hince Review</div>
+				<div class="date">2020-05-05</div>
+				<div class="count">110</div>
+			</li>
+			<li class="table_tr">
+				<div class="num">6</div>
+				<div class="subject">Hince Review</div>
+				<div class="date">2020-05-05</div>
+				<div class="count">110</div>
+			</li>
+			
+		</ul>
+		<ul>
+			<li class="table_th">
+				<div class="num dpnone">번호</div>
+				<div class="th_subject">제목</div>
+				<div class="date dpnone">등록일</div>
+				<div class="count dpnone">조회</div>
+			</li>
+			<li class="table_tr">
+				<div class="num">5</div>
+				<div class="subject">Hince Review</div>
+				<div class="date">2020-05-05</div>
+				<div class="count">110</div>
+			</li>
+			<li class="table_tr">
+				<div class="num">4</div>
+				<div class="subject">Hince Review</div>
+				<div class="date">2020-05-05</div>
+				<div class="count">230</div>
+			</li>
+			<li class="table_tr">
+				<div class="num">3</div>
+				<div class="subject">Hince Review</div>
+				<div class="date">2020-05-05</div>
+				<div class="count">112</div>
+			</li>
+			<li class="table_tr">
+				<div class="num">2</div>
+				<div class="subject">Hince Review</div>
+				<div class="date">2020-05-05</div>
+				<div class="count">110</div>
+			</li>
+			<li class="table_tr">
+				<div class="num">1</div>
+				<div class="subject">Hince Review</div>
+				<div class="date">2020-05-05</div>
+				<div class="count">59</div>
+			</li>
+		</ul>
+	</div>
+	<div class="pagination">
+		<div class="page_wrap">
+			<a href="#" class="btnll"><i class="fas fa-angle-double-left"></i></a>
+			<a href="#" class= "btnlb"><i class="fas fa-angle-left"></i></a>
+			<span class="btn">
+				<a href="#" class="active">1</a>
+				<a href="#" class="">2</a>
+				<a href="#" class="">3</a>
+            </span>				
+			<a href="#" class= "btnrb" ><i class="fas fa-angle-right"></i></a>
+			<a href="#" class="btnrr"><i class="fas fa-angle-double-right"></i></a>
+		</div>
+	</div>
+
+	<div id="bottom_wrap">
+		<div class="btn_wrap">
+			<button type="button" class="btn"><i class="fas fa-pencil-alt"></i></button>
+		</div>
+		<!-- search start-->
+		<fieldset id="bo_sch">
+			<legend>게시물검색</legend>
+			<form name="fsearch" method="get">
+				<label for="sfl" class="sound_only">검색대상</label>
+				<select name="sfl" id="sfl">
+					<option value="wr_subject||wr_content">제목+내용</option>
+					<option value="wr_subject">제목</option>
+					<option value="wr_content">내용</option>
+					<option value="wr_content">아이디</option>
+					<option value="wr_name">작성자</option>
+				</select>
+
+				<label for="sfx" class="sound_only">검색어</label>
+				<input type="text" name="stx" id="sfx" size="25" maxlength="20" placeholder="검색어를 입력해주세요" class="sch_input" required>
+				<button type="submit" value="검색" class="sch_btn"><i class="fas fa-search"></i></button>
+			</form>
+			
+		</fieldset>
+		<!-- search end -->
+	</div>
+</body>
+</html>
+</body>
+</html>

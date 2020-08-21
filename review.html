@@ -1,135 +1,16 @@
-<body>
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ko">
 <head>
-	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>hince</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0 , user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="js/jquery-3.4.1.min.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-	<link rel="stylesheet" href="css/reset.css">
+<!--	<link rel="stylesheet" href="css/reset.css">-->
 	<link rel="stylesheet" href="css/style.css">
 	
 <style>
-
-
-html,body { height: 100%;}
-#wrap { width: 100%;  height: 100%; margin: 0 auto;}
-#back_img {width: 100%; height: 875px;}
-#back_img img{ width: 100%; height: 100%; z-index: -9999;}
-
-        
-        
-        
-/*search*/
-    search {
-        width: 100%;
-        display: none;
-        z-index: 999999;
-        background:
-    }
-
-    search #info {
-        width: 100%;
-        height: 300px;
-        background: #eee;
-         
-        opacity: 0.7;
-        position: relative;
-    }
-    search #info .text_h {
-        width: 80%;
-        height: 150px;
-        background: #eee;
-        position: absolute;
-        left: 10%;
-        top: 20%;
-    }
-    search #info .text_h p {
-        font-size: 25px;
-        margin: 20px;
-        color: #4f645a;
-        font-weight: bold;
-    }
-    search #info .text_h .frm {
-        margin: 20px;
-        width: 90%;
-        border-bottom: 3px solid #fff;
-    }
-    search #info .frm .input_h { 
-        width:100%;
-        }
-    search #info .frm .input_h input[type="search"] {
-        border: 0;
-        width: 95%;
-        height: 25px;
-        font-size: 14px;
-        background: #eee;
-        color: #4f645a;
-        }
-    search #info .frm .input_h button {
-        direction: block;
-        width: 50px;
-        height: 50px;
-        border: 0;
-    }
-    search #info .frm .input_h a {
-        width: 20px;
-        height: 20px;
-        z-index: 999999;
-        _text-indent: -99999px; 
-    }
-
-    search #info .frm .input_h input[type="search"]:hover { opacity: 0.5; }
-
-        
-/* 헤더 */
-        body {min-width: 1024px; padding-top: 60px; height:3000px;} 
-
-        .nav-up { top: -60px;}
-
-        header {width: 100%; top: 0; left: 0; height: 60px; position: absolute; text-align: center;  position: fixed; z-index: 50; box-sizing:border-box; transition: top 0.2s ease-in-out; background: #eee; }
-    
-        #header nav {width: 100%; height: 60px;}
-        #header p { float: left; width: 10%;  height: 60px; font-size: 40px; margin-left: 10px; }
-        #header nav p:hover { opacity: 0.3; transition: all 0.5s;}
-        
-        #header .t_nav {width: 80%;  height: 60px; font-size: 35px; text-align: center;float: left;}
-        #header .t_nav ul li { 
-            display: block;
-            float: left;
-            width: 20%;
-            padding: 17px;
-            font-size: 20px;
-            transition: all 0.5s;
-            font-weight: bold;
-            letter-spacing: 3px; 
-            box-sizing: border-box;}
-        
-        #header >nav > .t_nav> ul> li:nth-child(1) {margin-left: 100px;}
-        nav li:hover a {color: white; opacity: 0.9; border-bottom: 10px solid #ddd; transition: all 0.5s;}
-        
-/*header icon*/
-        #header #top_img { float: right; width: 9%; height: 60px; line-height: 4; }
-        #header #top_img i{ margin-right: 30px;  font-size: 30px;}
-        #header #top_img a:hover { opacity: 0.3; transition: all 0.5s;}
-        
-        
-    
-    
-    
-    
-    
-/*  reset*/
-        *{margin: 0; padding: 0;}
-        body { box-sizing: border-box;  width: 100%; height: 800px;}
-        ul,ol {list-style: none; }
-        a { outline: 0; text-decoration: none; color: #000;}
-        img { border: 0;}
-        
-
         
 /*    sign_up*/
         #main {width: 100%; height: 400px; position: relative; top: 90px;}
@@ -141,7 +22,6 @@ html,body { height: 100%;}
         #sign_up ul:nth-child(4) {width:30%;  height: 60px; margin: 0 auto; }
         
         #sign_up ul li { width: 100%; text-align: left; }
-        #sign_up ul li h3 {width: 100%; text-align: center; margin-bottom: 30px; }
         #sign_up ul li p { text-align: left; font-size: 12px; }
         #sign_up ul li input { width: 100%; height: 30px;}
     
@@ -156,154 +36,86 @@ html,body { height: 100%;}
         
 </style>
 
+
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
 <script>
     $(function(){
-
-        var num=0;
-        $(".btn>a").click(function(){
-            var i = $(this).index();
-            $(".btn>a").removeClass();
-            $(".btn>a").eq(i).addClass("active");
-            $("ul").removeClass();
-            $("ul").eq(i).addClass("list");
-            num = i;
-        });
-        $(".btnlb").click(function(e){
-            e.preventDefault();
-            num = num-1;
-            if (num < 0){
-                num = 0;
-                return;
-            }
-            $(".btn>a").removeClass();
-            $(".btn>a").eq(num).addClass("active");
-            $("ul").removeClass();
-            $("ul").eq(num).addClass("list");
-        });
-        
-        $(".btnrb").click(function(e){      
-            e.preventDefault();
-            listNum = $(".btn>a").length;
-            num = num+1;
-            if (num >= listNum){
-                num = listNum-1;
-                return;
-            }
-            $(".btn>a").removeClass();
-            $(".btn>a").eq(num).addClass("active");
-            $("ul").removeClass();
-            $("ul").eq(num).addClass("list");
-        });
-        
-        $(".btnll").click(function(){
-            $(".btn>a").removeClass();
-            $(".btn>a").eq(0).addClass("active");
-            $("ul").removeClass();
-            $("ul").eq(0).addClass("list");
-            num = 0;
-        });
-        
-        $(".btnrr").click(function(){
-            $(".btn>a").removeClass();
-            $(".btn>a").eq(2).addClass("active");
-            $("ul").removeClass();
-            $("ul").eq(2).addClass("list");
-            num = 2;
-        });
-        
-        
-        
-        //헤더 스크롤 (숨겼다가 나오기)
-            var didScroll; 
-            var lastScrollTop = 0; 
-            var delta = 5; 
-            var navbarHeight = $('header').outerHeight();
-
-            $(window).scroll(function(event){ didScroll = true; });
-
-            setInterval(function() { 
-                if (didScroll) { 
-                    hasScrolled(); 
-                    didScroll = false; } }, 250);
-
-                function hasScrolled() { 
-                    var st = $(this).scrollTop(); 
-                    if(Math.abs(lastScrollTop - st) <= delta) return; 
-                    if (st > lastScrollTop && st > navbarHeight){
-                        $('header').removeClass('nav-down').addClass('nav-up'); } 
-                    else { 
-                        if(st + $(window).height() < $(document).height()) { 
-                            $('header').removeClass('nav-up').addClass('nav-down'); 
-                        } 
-                } 
-                lastScrollTop = st; 
-            }
-
-    
-            //검색 애니메이션
-                var search = $("search");
-                var s_bt = $("#s_bt");
-                var burger = $(".burger");    
-
-                s_bt.click(function(){
-                    search.slideToggle(700).animate({left:"+=50"},"linear",{'opacity':'1'});
-                });
-
-                s_bt.click(function(){
-                    search.clearQueue();
-                }); 
+		
+		//////////////////// header, footer로드 //////////////////////	
+			$("header").load("header.html");
+			$("footer").load("footer.html");
+		
+		////////////////////순서 넘기기 //////////////////////	
+            var num = 0,
+                $button = $(".pagination > .page_wrap > .btn > a"),
+                $layout = $(".table_layout > ul"),
+                $left = $(".pagination > .page_wrap > .btnlb"),
+                $right = $(".pagination > .page_wrap > .btnrb"),
+                $first = $(".pagination > .page_wrap > .btnll"),
+                $end = $(".button2 > .page_wrap > .btnrr");
+                
+            $button.click(function(){
+                var i = $(this).index();
+                $button.removeClass();
+                $button.eq(i).addClass("active");
+                $layout.removeClass();
+                $layout.eq(i).addClass("list");
+                num = i;
+            });
             
-            var promise = document.querySelector('video').play();
-            if (promise !== undefined) {
-
-              promise.then(_ => {
-                // 자동 재생 시작!
-              }).catch(error => {
-                // 자동 재생이 막힘.
-                // "Play" 버튼을 노출해 유저가 재생을 시작할 수 있도록 한다
-              });
+            $left.click(function(e){
+                e.preventDefault();
+                num = num-1;
+                if (num < 0) {
+                    num = 0;
+                    return; // 빠져나오기
+                }
+                motion();
+            });
+            
+            $right.click(function(e){
+                e.preventDefault();
+                $listNum = $(".pagination > .page_wrap > .btn > a").length;
+                num = num+1;
+                if (num >= $listNum){
+                    num = $listNum-1;
+                    return;
+                }
+                motion();
+            });
+            function motion(){
+                $button.removeClass();
+                $button.eq(num).addClass("active");
+                $layout.removeClass();
+                $layout.eq(num).addClass("list");
             }
+            
+            $first.click(function(e){
+                $button.removeClass();
+                $button.eq(0).addClass("active");
+                $layout.removeClass();
+                $layout.eq(0).addClass("list");
+                num=0;
+            });
+            $end.click(function(e){
+                var a = $(".pagination > .page_wrap > .btn > a").length-1;
+                $button.removeClass();
+                $button.eq(a).addClass("active");
+                $layout.removeClass();
+                $layout.eq(a).addClass("list");
+                num=a;
+            })
+    
+     
     });
 </script>
 </head>
 
 <body>
-    <header>
-        <div id="header" >
-            <nav>
-                <p><a href="HINCE_%ED%99%88%ED%8E%98%EC%9D%B4%EC%A7%80.html">hince</a></p>
-                <div class="t_nav">
-                    <ul>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Collection</a></li>
-                        <li><a href="#">Shop</a></li>
-                        <li class="review"><a href="review.html">Review</a></li>
-                    </ul>
-                </div>
-                <div id="top_img">
-                   <a href="login.html"><i class="far fa-user"></i></a>
-                   <a href="#" id="s_bt"><i class="fas fa-search"></i></a>
-                </div>
-            </nav>
-        </div>
-        <!-- 검색창-->
-    <search>
-       <div id="info">
-                <div class="text_h">
-                    <p>Search</p>
-                    <form action="#" class="frm">
-                        <div class="input_h">
-                            <input type="search" placeholder="검색어를 입력해주세요">
-                            <button><a href="#" ><img src="img/search.png" alt="검색"/></a></button>
-                        </div>
-                    </form>
-                </div>
-          </div>
-   </search>
-</header>
+<!--header-->
+<header></header>
 
-<!--본문 시작-->
-    <h1>Review</h1>
+<!--본문(S))--> 
 	<div class="table_layout">
 		<ul class="list">
 			<li class="table_th">
@@ -422,17 +234,19 @@ html,body { height: 100%;}
 			</li>
 		</ul>
 	</div>
+<!--본문(e))-->
+
 	<div class="pagination">
 		<div class="page_wrap">
-			<a href="#" class="btnll"><i class="fas fa-angle-double-left"></i></a>
-			<a href="#" class= "btnlb"><i class="fas fa-angle-left"></i></a>
+			<a href="javascript:;" class="btnll"><i class="fas fa-angle-double-left"></i></a>
+			<a href="javascript:;" class= "btnlb"><i class="fas fa-angle-left"></i></a>
 			<span class="btn">
-				<a href="#" class="active">1</a>
-				<a href="#" class="">2</a>
-				<a href="#" class="">3</a>
+				<a href="javascript:;" class="active">1</a>
+				<a href="javascript:;" class="">2</a>
+				<a href="javascript:;" class="">3</a>
             </span>				
-			<a href="#" class= "btnrb" ><i class="fas fa-angle-right"></i></a>
-			<a href="#" class="btnrr"><i class="fas fa-angle-double-right"></i></a>
+			<a href="javascript:;" class= "btnrb" ><i class="fas fa-angle-right"></i></a>
+			<a href="javascript:;" class="btnrr"><i class="fas fa-angle-double-right"></i></a>
 		</div>
 	</div>
 
@@ -461,7 +275,6 @@ html,body { height: 100%;}
 		</fieldset>
 		<!-- search end -->
 	</div>
-</body>
-</html>
+	<footer></footer>
 </body>
 </html>

@@ -210,13 +210,14 @@
 	
 	/*햄버거 버튼*/
 	#main {
+		width: 70px;
+    	height: 80px;
 		position: fixed;
 		display: block;
 		_transition: margin-right .5s;
 		padding: 0;
 		top: 0;
 		z-index: 9998;
-		cursor: pointer;
 	}
 	
 	.openbtn {
@@ -227,6 +228,7 @@
 		background: none;
 		padding: 10px 15px;
 		border: none;
+		cursor: pointer;
 	}
 
 	.openbtn:hover {
@@ -287,6 +289,8 @@
 	
 	/*햄버거 버튼*/
 	#main {
+		width: 70px;
+    	height: 80px;
 		position: fixed;
 		display: block;
 		_transition: margin-right .5s;

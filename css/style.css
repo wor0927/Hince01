@@ -219,22 +219,31 @@ img {
 	background: #e6e6e6;
 }
 
-/*media start*/
+/*---------------------------- 반응형 ----------------------------*/
 @media screen and (max-width:600px) {
-
+	.table_layout {
+		width: 90%;
+		height: 400px;
+		margin: 100px auto 0 auto;
+	}
+	
 	.table_layout .list > li > div {
-		display: block !important;
+		_display: block !important;
 	}
 
 	.table_layout ul li {
-		display: block;
+		_display: block;
 		border-bottom: 1px solid #e0e0e0;
 	}
 
 	.table_layout ul li div {
 		display: block;
 	}
-
+/*
+	.th_subject {
+		width: 80%;
+	}
+*/
 	.num.dpnone,
 	.date.dpnone,
 	.count.dpnone {
@@ -263,9 +272,9 @@ img {
 	}
 
 	.table_layout .table_th > div {
-		height: 50px;
+		height: 30px;
 		border: none;
-		border-top: 3px solid #0e71b8;
+		border-top: 3px solid darkseagreen;
 		border-bottom: 1px solid #e0e0e0;
 		font-size: 15px;
 	}
@@ -287,16 +296,18 @@ img {
 
 	.subject {
 		word-wrap: normal;
-		_width: calc(100% - 50px);
+		width: calc(100% - 200px);
 		white-space: nowrap;
 		overflow: hidden;
 		text-overflow: ellipsis;
+		font-size: 15px;
 	}
 
 	.btn_wrap {
 		width: 100%;
 		margin-bottom: 20px;
-		padding-right: 180px;
+		padding-right: 0;
+		text-align: center;
 	}
 
 	#bo_sch {
@@ -307,7 +318,7 @@ img {
 	.btn_wrap .btn {
 		width: 92px;
 		height: 34px;
-		font-size: 13px;
+		font-size: 20px;
 	}
 
 	/*paging*/
@@ -323,4 +334,4 @@ img {
 	}
 }
 
-/*media end*/
+/*---------------------------------------------------------------*/
